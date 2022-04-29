@@ -1,3 +1,7 @@
+###
+This basic configuration of a 2960 switch is a single switch with endpoints connected (hence Spanning-Tree Portfast).
+###
+
 no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
