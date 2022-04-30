@@ -1,0 +1,80 @@
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname MainRouter
+!
+!
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username admin secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+!
+crypto key generate rsa general-keys modulus 1024
+!
+!
+!
+!
+ip ssh version 2
+no ip domain-lookup
+ip domain-name prime.pri
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ ip address 10.10.0.1 255.255.255.0
+ no shutdown
+!
+interface FastEthernet0/1
+ ip address 10.20.0.1 255.255.255.0
+ no shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ logging synchronous
+ login local
+!
+line aux 0
+ logging synchronous
+ login local
+!
+line vty 0 4
+ logging synchronous
+ login local
+ transport input ssh
+!
+!
+!
+end
