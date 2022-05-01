@@ -1,6 +1,5 @@
 Switch starter configuration
 ----------------------------
-
 enable
 config t
 hostname OfficeSwitch
@@ -26,9 +25,9 @@ interface vlan 10
 ip address 10.10.0.2 255.255.255.0
 no shutdown
 
-copy running-config startup-config
-
 ip default-gateway 10.10.0.1
+
+copy running-config startup-config
 
 Router starter configuration
 ----------------------------
