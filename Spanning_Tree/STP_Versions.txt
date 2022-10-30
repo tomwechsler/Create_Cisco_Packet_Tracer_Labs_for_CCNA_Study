@@ -1,0 +1,37 @@
+Ethernet 	Speed IEEE Cost: 1998 (and Before) 	IEEE Cost: 2004 (and After)
+10 Mbps 	100 					2,000,000
+100 Mbps 	19 					200,000
+1 Gbps 		4 					20,000
+10 Gbps 	2 					2000
+100 Gbps 	N/A 					200
+1 Tbps 		N/A 					20
+
+
+Common Spanning Tree Protocol (STP)		1990 als IEEE 802.1D 
+
+Per VLAN Spanning Tree Protocol (PVST+)	 	Cisco properitär
+
+Rapid Spanning Tree Protocol (RSTP)		IEEE 802.1w
+
+Rapid Per-VLAN Spanning Tree (Rapid PVST+)	Cisco properitär	
+
+Multiple Spanning Tree Protocol (MSTP) 		IEEE 802.1s
+
+
+Root-Bridge Election
+--------------------
+- The lowest priority (standard = 32768)
+- If that ties, the lowest MAC address
+
+
+Interface Modus
+---------------
+
+STP => BLK, LSN, LRN, FWD (Blocking 20s, Listening 15s, Learning 15s, Forwarding)
+
+RSTP+ => DIS, LRN, FWD
+
+
+
+
+
