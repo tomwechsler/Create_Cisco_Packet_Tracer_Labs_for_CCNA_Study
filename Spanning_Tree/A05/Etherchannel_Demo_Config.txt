@@ -1,0 +1,13 @@
+ena
+conf t
+interface range gigabitEthernet 0/1 - 2
+channel-group 1 mode desirable
+exit
+interface port-channel 1
+speed auto
+#on physical switch "duplex auto" and "mdix auto" should also be configured
+#switchport trunk encapsulation dot1q (should also be configured - no available in PT)
+switchport mode trunk
+switchport nonegotiate
+end
+wr

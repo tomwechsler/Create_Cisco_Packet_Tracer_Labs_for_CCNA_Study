@@ -1,0 +1,4 @@
+vtp version 2
+vtp domain prime.pri
+vtp mode server
+vtp password cisco

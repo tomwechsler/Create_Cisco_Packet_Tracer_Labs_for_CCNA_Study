@@ -1,0 +1,15 @@
+ena
+conf t
+hostname SW3
+end
+wr
+conf t
+interface range gigabitEthernet 0/1 -2
+switchport mode trunk
+#switchport trunk encapsulation dot1q	(not available in 2960 Packet Tracer)
+switchport trunk allowed vlan all	(demo purpose)
+switchport nonegotiate
+end
+wr
+show interfaces trunk
+show interfaces gigabitEthernet 0/1 switchport
